@@ -1,0 +1,155 @@
+body {
+    background-color: #EAEAEA;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.navbar-brand{
+    margin-left:35px;
+    font-size: 23px;
+}
+.navbar-brand:hover{
+    color:white;    
+}
+.Home{
+    text-decoration:none;
+    color:white;
+    margin-right:30px;
+}
+nav {
+    background: #28475A;
+}
+.d-flex{
+    margin-left:-1070px;
+    background-color: white;
+}
+hr {
+    margin-top: 20px;
+    margin-left: -130px;
+    width: 1370px;
+}
+.Subtitle {
+    margin-top: 20px;
+    margin-left: -77px;
+    font-size: 20px;
+}
+div.row{
+    border:1px solid white;
+    margin-top:40px;
+    background-color:white;
+    width:1100px;
+    margin-left:0;
+    border-radius:10px;
+}
+.TitleAgg{
+    font-size:20px;
+    margin-top:22px;
+    margin-left:32px;
+}
+.SubtAgg{
+    margin-left:32px;
+    margin-top:15px;
+}
+button{
+    margin-left:30px;
+}
+.TitleMod{
+    font-size:20px;
+    margin-left:32px;
+    margin-top:40px;
+}
+.seccion1{
+    margin-top:30px;
+    margin-left:30px;
+}
+.seccion2{
+    margin-left:400px;
+    margin-top:-78px;
+}
+.select{
+    height:30px;
+}
+.seccion3 {
+    margin-left: 800px;
+    margin-top: -138px;
+}
+.op1{
+    margin-left:25px;
+    margin-top:-25px;
+}
+.chkdi {
+    margin-left: 120px;
+    margin-top:-40px;
+}
+.op2{
+    margin-left:25px;
+    margin-top:-24px;
+}
+check{
+    margin-top:20px;
+}
+input[type="text"]{
+    border-radius: 5px;
+    border: 1px solid #D7D4D4;
+    height:40px;
+    width:320px;
+}
+.select1 {
+    border-radius: 5px;
+    border: 1px solid #D7D4D4;
+    height: 40px;
+    width: 350px;
+}
+.Btn2{
+    margin-left:100px;
+    margin-top:-39px;
+}
+.SeccionBtns{
+    margin-top:80px;
+}
+.icono{
+    margin-right:5px;
+}
+.icono2 {
+    margin-right: 5px;
+}
+.Btn1{
+    margin-left:-25px;
+}
+.img1{
+    margin-left:-1030px;
+}
+.TitleTable{
+    margin-left:17px;
+}
+.tbgnr{
+    width:95%;
+    margin-left:15px;
+}
+
+table, tr, th, td {
+    border: none;
+    text-align: center;
+    font-family:Arial;
+}
+.btnDelete{
+    height:1px;
+}
+div.r2{
+    width:100%;
+}
