@@ -47,11 +47,27 @@
               </div>
               <div class="seccion3">
               <p>Tipo de entidad:*</p>
-              <input type="checkbox" value="Individuo" name="Tipo_Identidad" id="Tipo_Identidad"/>
+              <input type="checkbox" value="Individuo" name="Tipo_Identidad" id="Tipo_Identidad1" onclick="validate(1);"/>
               <p class="op1">Individuo</p>
-              <div class="chkdi">
-              
+                            <div class="chkdi">
+              <input type="checkbox" value="Compañia" name="Tipo_Identidad" id="Tipo_Identidad2" onclick="validate(2);"/>
+              <p class="op1">Compañia</p>
 
+               <script>
+                function validate(elemento) {
+                    var checkbox1 = document.getElementById("Tipo_Identidad1");
+                    var checkbox2 = document.getElementById("Tipo_Identidad2");
+
+                    if (checkbox1.checked == true && elemento !==2) {
+                        checkbox2.checked = false;
+                    }
+                    if(checkbox2.checked == true && elemento !==1){
+                        checkbox1.checked = false;
+                    }
+   
+                }
+                  
+              </script>
               <div class="SeccionBtns">
                   <div class="Btn1">   
                    <button type="submit" value="Save" class="btn btn-success"><i class="fas fa-save icono"></i>Save</button>
