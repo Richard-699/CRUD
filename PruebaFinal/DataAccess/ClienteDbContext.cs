@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PruebaFinal.Models;
 
-namespace PruebaFinal.Models
+namespace PruebaFinal.DataAccess
 {
     public class ClienteDbContext:DbContext
     {
