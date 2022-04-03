@@ -3,11 +3,9 @@
 namespace PruebaFinal.Models
 {
     public class Pais
-    {
-        [Key]
-        public int Id_Pais { get; set; } 
-        public string Nombre_Pais { get; set; }    
-        public virtual ICollection<Pais> Paises { get; set; } 
+    { 
+        public int Id { get; set; } 
+        public string Nombre { get; set; }    
 
     }
 }

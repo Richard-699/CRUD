@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using PruebaFinal.DataAccess;
 using PruebaFinal.DTOS;
 using PruebaFinal.Models;
 

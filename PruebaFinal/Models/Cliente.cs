@@ -5,11 +5,10 @@ namespace PruebaFinal.Models
 {
     public class Cliente
     {
-        [Key]
-        public int Id_Cliente { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Tipo_Identidad { get; set; }
-        [ForeignKey("Pais")]
-        public int Id_Pais { get; set; }
+        public string TipoIdentidad { get; set; }
+        public Pais Pais { get; set; }
+        public int IdPais { get; set; }
     }
 }

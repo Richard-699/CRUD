@@ -1,5 +1,4 @@
-﻿@model List<PruebaFinal.DTOS.ClienteDTO> 
-@using PruebaFinal.DTOS;
+﻿@model PruebaFinal.DTOS.ClienteDTO;
 @{
     ViewData["Title"] = "INICIO";
 }
@@ -33,41 +32,23 @@
                 <input type="text" name="Nombre" id="Nombre"/>
               </div>
               <div class="seccion2">
-              <p>País:*</p>
-              <select class="select1" name="Id_Pais" id="Id_Pais">
-                  <option value="Seleccione una opción" selected>Seleccione una opción</option>
-                  <option value="5">Estados Unidos</option>
-                  <option value="1005">Puerto Rico</option>
-                  <option value="1006">Otros</option>
-              </select>
-              
+              <label>Pais:*</label>
+                <select asp-for="IdPais" title="" class="select1"
+                asp-items="@(new SelectList(Model.Paises, "Id", "Nombre"))">
+                <option disabled selected>Seleccione un pais</option>
+                </select>
               <br />
               <br />
               <p>Valores para dropdown: PR, EU, Otro</p>
               </div>
               <div class="seccion3">
               <p>Tipo de entidad:*</p>
-              <input type="checkbox" value="Individuo" name="Tipo_Identidad" id="Tipo_Identidad1" onclick="validate(1);"/>
+              <input type="checkbox" value="Individuo" name="TipoIdentidad" id="Tipo_Identidad1" onclick="validate(1);"/>
               <p class="op1">Individuo</p>
                             <div class="chkdi">
-              <input type="checkbox" value="Compañia" name="Tipo_Identidad" id="Tipo_Identidad2" onclick="validate(2);"/>
+              <input type="checkbox" value="Compañia" name="TipoIdentidad" id="Tipo_Identidad2" onclick="validate(2);"/>
               <p class="op1">Compañia</p>
 
-               <script>
-                function validate(elemento) {
-                    var checkbox1 = document.getElementById("Tipo_Identidad1");
-                    var checkbox2 = document.getElementById("Tipo_Identidad2");
-
-                    if (checkbox1.checked == true && elemento !==2) {
-                        checkbox2.checked = false;
-                    }
-                    if(checkbox2.checked == true && elemento !==1){
-                        checkbox1.checked = false;
-                    }
-   
-                }
-                  
-              </script>
               <div class="SeccionBtns">
                   <div class="Btn1">   
                    <button type="submit" value="Save" class="btn btn-success"><i class="fas fa-save icono"></i>Save</button>
@@ -87,7 +68,8 @@
         </div>
       </div>
     <br />
-    @if (Model.Count > 0)
+
+    @if(Model.clientes.Count >0)
     {
         <div class="row r2">
             <div class="col md-12">
@@ -102,14 +84,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var cliente in Model)
+                        @foreach (var cliente in Model.clientes)
                         {
                             <tr>
                                 <td>@cliente.Nombre</td>
-                                <td>@cliente.Id_Pais</td>
-                                <td>@cliente.Tipo_Identidad</td>
+                                <td>@cliente.IdPais</td>
+                                <td>@cliente.TipoIdentidad</td>
                                 <td>
-                                    <button onclick="jsDelete(@cliente.Id_Cliente);" class="btn btn-danger"><i class="fa fa-close"></i></button>
+                                    <button onclick="jsDelete(@cliente.Id);" class="btn btn-danger"><i class="fa fa-close"></i></button>
                                 </td>
                             </tr>
                         }
@@ -120,7 +102,7 @@
             </div>
         </div>
     }
-</div>
+</div>  
 </div>
 
 <script>
@@ -133,6 +115,17 @@
                 alert("Ocurrió un error")
             }
         })
+    }
+    function validate(elemento) {
+    var checkbox1 = document.getElementById("Tipo_Identidad1");
+    var checkbox2 = document.getElementById("Tipo_Identidad2");
+
+    if (checkbox1.checked == true && elemento !==2) {
+        checkbox2.checked = false;
+    }
+    if(checkbox2.checked == true && elemento !==1){
+        checkbox1.checked = false;
+    }
     }
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
