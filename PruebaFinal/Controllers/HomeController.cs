@@ -22,14 +22,14 @@ namespace PruebaFinal.Controllers
             _logger = logger;
             _mapper = mapper;
             _context = context;
-            
+            clienteDTO=new ClienteDTO();
         }
         [HttpGet]
         public async Task<ClienteDTO> Get()
         {
             var clientes = await _context.Cliente.ToListAsync();
             var Paises = await _context.Pais.ToListAsync();
-            clienteDTO.Nombre = "Ejem";
+            clienteDTO.Paises = Paises;
             clienteDTO.clientes = clientes;
             return clienteDTO;
         }

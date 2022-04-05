@@ -8,7 +8,7 @@ namespace PruebaFinal.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string TipoIdentidad { get; set; }
-        public Pais Pais { get; set; }
-        public int IdPais { get; set; }
+        public Pais? Pais { get; set; }
+        public int PaisId { get; set; }
     }
 }

@@ -11,12 +11,12 @@ namespace PruebaFinal.DTOS
         [Required (ErrorMessage="El nombre es un campo obligatorio.")]
         [StringLength (50)]
         public string Nombre { get; set; }
-        [Display(Name = "TipoIdentidad")]
+        [Display(Name = "TipoIdentidad")]   
         [Required(ErrorMessage= "El tipo de identidad es requerido.")]
         [StringLength(50)]
         public string TipoIdentidad { get; set; }
-        public int IdPais { get; set; }
-        public List<Pais> Paises { get; set; }
-        public List<Cliente> clientes { get; set; }   
+        public int PaisId { get; set; }
+        public List<Pais>? Paises { get; set; }
+        public List<Cliente>? clientes { get; set; }   
     }
 }
