@@ -33,7 +33,7 @@
               </div>
               <div class="seccion2">
               <label>Pais:*</label>
-                <select asp-for="IdPais" title="" class="select1"
+                <select asp-for="PaisId" title="" class="select1"
                 asp-items="@(new SelectList(Model.Paises, "Id", "Nombre"))">
                 <option disabled selected>Seleccione un pais</option>
                 </select>
@@ -88,7 +88,7 @@
                         {
                             <tr>
                                 <td>@cliente.Nombre</td>
-                                <td>@cliente.IdPais</td>
+                                <td>@cliente.Pais.Nombre</td>
                                 <td>@cliente.TipoIdentidad</td>
                                 <td>
                                     <button onclick="jsDelete(@cliente.Id);" class="btn btn-danger"><i class="fa fa-close"></i></button>
