@@ -86,7 +86,7 @@ button{
 }
 .seccion3 {
     margin-left: 800px;
-    margin-top: -138px;
+    margin-top: -290px;
 }
 .op1{
     margin-left:25px;
@@ -152,4 +152,10 @@ table, tr, th, td {
 }
 div.r2{
     width:100%;
+}
+.select2 {
+    border-radius: 5px;
+    border: 1px solid #D7D4D4;
+    height: 40px;
+    width: 350px;
 }

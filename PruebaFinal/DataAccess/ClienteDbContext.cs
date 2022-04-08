@@ -7,6 +7,7 @@ namespace PruebaFinal.DataAccess
     {
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Pais> Pais { get; set; }
+        public DbSet<Ciudades> Ciudades { get; set; }
 
         public ClienteDbContext(DbContextOptions<ClienteDbContext> options) : base(options)
         {
