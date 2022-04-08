@@ -16,7 +16,9 @@ namespace PruebaFinal.DTOS
         [StringLength(50)]
         public string TipoIdentidad { get; set; }
         public int PaisId { get; set; }
+        public int CiudadesId { get; set; }
         public List<Pais>? Paises { get; set; }
         public List<Cliente>? clientes { get; set; }   
+        public List<Ciudades>? ciudades { get; set; }
     }
 }

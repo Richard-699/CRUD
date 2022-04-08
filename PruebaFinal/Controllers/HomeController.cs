@@ -29,7 +29,9 @@ namespace PruebaFinal.Controllers
         {
             var clientes = await _context.Cliente.ToListAsync();
             var Paises = await _context.Pais.ToListAsync();
+            var Ciudad= await _context.Ciudades.ToListAsync();
             clienteDTO.Paises = Paises;
+            clienteDTO.ciudades = Ciudad;
             clienteDTO.clientes = clientes;
             return clienteDTO;
         }
